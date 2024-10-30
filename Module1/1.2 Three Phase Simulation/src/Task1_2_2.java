@@ -1,4 +1,4 @@
-public class Task1_2 {
+public class Task1_2_2 {
     public static void main(String[] args) {
         EventList list = new EventList();
         int range = 0;
