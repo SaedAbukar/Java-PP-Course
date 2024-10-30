@@ -14,7 +14,8 @@ public class ServicePoint {
         return queue.removeLast();
     }
 
-    public void serve() {
+    public int serve() {
+        int totalServiceTime = 0;
         while (!queue.isEmpty()) {
             Customer customer = removeFromQueue();
             customer.setEndTime();
@@ -24,8 +25,9 @@ public class ServicePoint {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            long serviceTime = customer.getTime() + sleepTime;
-            System.out.printf("Customer %d service time: %d milliseconds%n", customer.getId(), serviceTime);
-        }
+            totalServiceTime += sleepTime;
+            long responseTime = customer.getTime() + sleepTime;
+            System.out.printf("Customer %d service time: %d milliseconds%n", customer.getId(), responseTime);
+        } return totalServiceTime;
     }
 }
