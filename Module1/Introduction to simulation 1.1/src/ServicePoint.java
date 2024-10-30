@@ -27,7 +27,7 @@ public class ServicePoint {
             }
             totalServiceTime += sleepTime;
             long responseTime = customer.getTime() + sleepTime;
-            System.out.printf("Customer %d service time: %d milliseconds%n", customer.getId(), responseTime);
+            System.out.printf("Customer %d response time: %d milliseconds%n", customer.getId(), responseTime);
         } return totalServiceTime;
     }
 }
