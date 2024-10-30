@@ -24,8 +24,8 @@ public class ServicePoint {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.printf("Customer %d waiting time in the queue: %d milliseconds%n", customer.getId(), customer.getTime());
-            System.out.printf("Service time: %d milliseconds%n", sleepTime);
+            long serviceTime = customer.getTime() + sleepTime;
+            System.out.printf("Customer %d service time: %d milliseconds%n", customer.getId(), serviceTime);
         }
     }
 }
