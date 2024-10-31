@@ -4,6 +4,10 @@ import java.util.PriorityQueue;
 public class EventList {
     private PriorityQueue<Event> eventPriorityQueue = new PriorityQueue<>();
 
+    public int size() {
+        return eventPriorityQueue.size();
+    }
+
     public void addToPriorityQueue(Event event) {
         eventPriorityQueue.add(event);
     }
