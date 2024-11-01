@@ -9,8 +9,8 @@ public class Customer {
 
 
    Customer(){
+       this.id = increment;
        increment++;
-       id = increment;
    }
 
    public int getId() {
